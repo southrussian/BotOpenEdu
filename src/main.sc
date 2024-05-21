@@ -2,22 +2,23 @@ require: slotfilling/slotFilling.sc
   module = sys.zb-common
 theme: /
 
-    state: Start
-        q!: $regex</start>
-        a: Let's start.
-
     state: Hello
         intent!: /hello
-        a: Hello hello
+        a: Привет! Чем могу помочь?
 
-    state: Bye
-        intent!: /bye
+    state: Weather
+        intent!: /weather
         a: Bye bye
 
     state: NoMatch
         event!: noMatch
         a: I do not understand. You said: {{$request.query}}
 
+    state: Currency
+        event!: /currency 
+        a: Курс доллара: 90,30 руб.
+        
+    
     state: Match
         event!: match
         a: {{$context.intent.answer}}
