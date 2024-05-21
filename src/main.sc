@@ -25,7 +25,7 @@ theme: /
             a: Я вас не понял. Повторите, пожалуйста
 
     state: Currency
-        event!: /currency 
+        intent!:/currency 
         q!: *курс валют
         q!: *сообщи курс ~валют*
         random:
